@@ -1,3 +1,5 @@
+1. Package name 'chatujs'
+
 npm install chatujs
 
 Usage
