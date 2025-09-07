@@ -1,4 +1,4 @@
-1. Package name 'chatujs'
+Package name 'chatujs'
 
 npm install chatujs
 
