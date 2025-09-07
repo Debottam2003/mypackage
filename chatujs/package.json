@@ -1,0 +1,13 @@
+{
+  "name": "chatujs",
+  "version": "1.0.6",
+  "description": "This is the first package of team chatu",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  },
+  "keywords": ["chatu"],
+  "author": "Debottam Kar",
+  "license": "ISC",
+  "type": "module"
+}
