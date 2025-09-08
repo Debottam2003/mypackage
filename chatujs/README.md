@@ -2,13 +2,13 @@
 
 My first npm package 🚀
 
-This package exports a simple team list as an array of names.
+This package exports a simple team list as an array of names and random Integer generator function and
+random element choice function.
 
 ## Installation
 
 ```bash
 npm install chatujs
-```
 
 Usage
 # ESM (Recommended)
@@ -34,7 +34,7 @@ console.log("Team (default):", teamDefault);
 -------------------------------------------------------------
 import teamDefault, { randomChoice } from "chatujs";
 console.log(randomChoice(teamDefault));
-// Random member from team Ex. "Debottam Kar" 
+// Random member from team Ex. "Debottam Kar"
 
 # CommonJS
 
@@ -67,4 +67,4 @@ console.log(pkg.randomInt(100));
 
 console.log(pkg.randomChoice(pkg.team));
 // Random name from team
-
+```
