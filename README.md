@@ -1,1 +1,1 @@
-# Our first npm package 🚀
+# Our first npm package 🚀 but not the last..
