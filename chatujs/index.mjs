@@ -5,11 +5,20 @@ export function randomInt(upperLimit) {
     return randomNumber;
 }
 
+export function randomFloat(upperLimit) {
+    let randomNumber = Math.random() * upperLimit;
+    return randomNumber;
+}
+
 export function randomChoice(arr) {
     if (!arr || !Array.isArray(arr) || arr.length === 0) {
         throw new Error("Array must not be empty");
     }
     return arr[randomInt(arr.length)];
+}
+
+export function randomId() {
+    return crypto.randomUUID();
 }
 
 export default team;
