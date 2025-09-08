@@ -2,8 +2,14 @@
 
 My first npm package 🚀
 
-This package exports a simple team list as an array of names and random Integer generator function, random
-floating number, random element choice from array function and random id generation function.
+This package exports a simple team list (as an array of names) along with utility functions for generating:
+
+- a random integer
+- a random floating-point number
+- a random element from an array
+- a random ID
+
+[![Version](https://img.shields.io/badge/version-1.1.5-blue)]()  
 
 ## - - - Happy JSing - - -
 
@@ -11,72 +17,86 @@ floating number, random element choice from array function and random id generat
 
 ```bash
 npm install chatujs
+```
 
-Usage
-# ESM (Recommended)
+## Usage
 
+### ESM (Recommended)
+
+```js
 import { team, randomInt, randomFloat, randomChoice, randomId } from "chatujs";
 
 console.log("Team:", team);
--> ["Gagan Mondal", "Shubhranil Karmakar", "Debottam Kar"]
+-> ["Gaganandra Mondal", "Shubhranil Karmakar", "Debottam Kar"]
 
-console.log("Random number:", randomInt(100));
-e.g., 42
--> Takes a upperlimit(Excluded) and gives a pseudo random number between (0 to upperlimit - 1).
+console.log("Random number:", randomInt(0, 100));
+-> Random integer between min and max (inclusive), e.g., 42
 
-console.log(randomFloat(50));
--> 41.59340295897138
+console.log(randomFloat(1, 50));
+-> Random floating number between min (inclusive) and max (exclusive), e.g., 41.59
 
 console.log("Random teammate:", randomChoice(team));
-e.g., "Shubhranil Karmakar"
--> randomChoice(arr) Takes an array of any type and returns random a element from the array.
+-> Takes an array and returns a random element, e.g., "Shubhranil Karmakar"
 
 console.log(randomId());
--> f594d6ec-7af4-4ef9-ae2c-69cad3cc0361 (crypto package is used)
+-> e.g., f594d6ec-7af4-4ef9-ae2c-69cad3cc0361 (uses crypto)
+```
 
-------------------------------------------------------------
+You can also use the default export:
+
+```js
 import teamDefault from "chatujs";
 console.log("Team (default):", teamDefault);
--> ["Gagan Mondal", "Shubhranil Karmakar", "Debottam Kar"]
+-> ["Gaganandra Mondal", "Shubhranil Karmakar", "Debottam Kar"]
+```
 
--------------------------------------------------------------
+Or mix default + named imports:
+
+```js
 import teamDefault, { randomChoice } from "chatujs";
 console.log(randomChoice(teamDefault));
--> Random member from team e.g., "Debottam Kar"
+-> e.g., "Debottam Kar"
+```
 
-# CommonJS
+---
 
-const { team, randomInt, randomFloat, randomChoice, randomId } = require("./index.cjs");
+### CommonJS
+
+```js
+const { team, randomInt, randomFloat, randomChoice, randomId } = require("chatujs");
 
 console.log(team);
 -> ["Gaganandra Mondal", "Shubhranil Karmakar", "Debottam Kar"]
 
-console.log(randomInt(100));
--> Random integer 0–99
+console.log("Random number:", randomInt(0, 100));
+-> e.g., 42
 
-console.log(randomFloat(50));
--> 41.59340295897138
+console.log(randomFloat(1, 50));
+-> e.g., 41.59
 
 console.log(randomChoice(team));
--> Random name from team e.g., "Shubhranil Karmakar"
+-> e.g., "Shubhranil Karmakar"
 
 console.log(randomId());
--> f594d6ec-7af4-4ef9-ae2c-69cad3cc0361 (crypto package is used)
+-> e.g., f594d6ec-7af4-4ef9-ae2c-69cad3cc0361
+```
 
--------------------------------------------------------------
-const team = require("./index.cjs").default;
+Import the default export:
+
+```js
+const team = require("chatujs").default;
 console.log(team);
 -> ["Gaganandra Mondal", "Shubhranil Karmakar", "Debottam Kar"]
+```
 
----------------------------------------------------------------
-const pkg = require("./index.cjs");
+Or require the full package:
+
+```js
+const pkg = require("chatujs");
 
 console.log(pkg.team);
--> ["Gaganandra Mondal", "Shubhranil Karmakar", "Debottam Kar"]
-
-console.log(pkg.randomInt(100));
--> Random integer 0–99
-
+console.log(pkg.randomInt(1, 100));
 console.log(pkg.randomChoice(pkg.team));
--> Random name from team e.g., "Debottam Kar"
 ```
+
+---
