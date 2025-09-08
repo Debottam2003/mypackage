@@ -6,7 +6,7 @@ export function randomInt(upperLimit) {
 }
 
 export function randomChoice(arr) {
-    if (!arr || arr.length === 0) {
+    if (!arr || !Array.isArray(arr) || arr.length === 0) {
         throw new Error("Array must not be empty");
     }
     return arr[randomInt(arr.length)];
