@@ -1,6 +1,6 @@
 {
   "name": "chatujs",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "This is the first package of team chatu",
   "type": "module",
   "main": "./index.cjs",
