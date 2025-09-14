@@ -12,7 +12,7 @@ This package exports a simple team list (as an array of names) along with utilit
 - a random String
 - a random Shuffle
 
-[![Version](https://img.shields.io/badge/version-1.2.2-blue)]()
+[![Version](https://img.shields.io/badge/version-1.2.3-blue)]()
 
 ## - - - Happy JSing - - -
 
@@ -27,7 +27,7 @@ npm install chatujs
 ### ESM (Recommended)
 
 ```js
-import { team, randomInt, randomFloat, randomChoice, randomId, randomPassword, randomString } from "chatujs";
+import { team, randomInt, randomFloat, randomChoice, randomId, randomPassword, randomString, randomShuffle } from "chatujs";
 
 console.log("Team:", team);
 -> ["Gaganandra Mondal", "Shubhranil Karmakar", "Debottam Kar"]
@@ -77,7 +77,7 @@ console.log(randomChoice(teamDefault));
 ### CommonJS
 
 ```js
-const { team, randomInt, randomFloat, randomChoice, randomId, randomPassword, randomString } = require("chatujs");
+const { team, randomInt, randomFloat, randomChoice, randomId, randomPassword, randomString, randomShuffle } = require("chatujs");
 
 console.log(team);
 -> ["Gaganandra Mondal", "Shubhranil Karmakar", "Debottam Kar"]
