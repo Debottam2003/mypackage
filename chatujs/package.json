@@ -1,6 +1,6 @@
 {
   "name": "chatujs",
-  "version": "1.1.5",
+  "version": "1.2.0",
   "description": "This is the first package of team chatu",
   "type": "module",
   "main": "./index.cjs",
@@ -13,7 +13,15 @@
       "types": "./index.d.ts"
     }
   },
-  "keywords": ["chatu", "utils", "random"],
+  "keywords": [
+    "chatu",
+    "chatujs",
+    "utils",
+    "random",
+    "random password",
+    "random string",
+    "string"
+  ],
   "author": "Debottam Kar, Shubhranil Karmakar, Gaganandra Mondal",
   "license": "ISC"
 }

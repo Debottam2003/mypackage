@@ -9,7 +9,7 @@ This package exports a simple team list (as an array of names) along with utilit
 - a random element from an array
 - a random ID
 
-[![Version](https://img.shields.io/badge/version-1.1.5-blue)]()  
+[![Version](https://img.shields.io/badge/version-1.2.0-blue)]()
 
 ## - - - Happy JSing - - -
 
@@ -24,7 +24,7 @@ npm install chatujs
 ### ESM (Recommended)
 
 ```js
-import { team, randomInt, randomFloat, randomChoice, randomId } from "chatujs";
+import { team, randomInt, randomFloat, randomChoice, randomId, randomPassword, randomString } from "chatujs";
 
 console.log("Team:", team);
 -> ["Gaganandra Mondal", "Shubhranil Karmakar", "Debottam Kar"]
@@ -40,6 +40,13 @@ console.log("Random teammate:", randomChoice(team));
 
 console.log(randomId());
 -> e.g., f594d6ec-7af4-4ef9-ae2c-69cad3cc0361 (uses crypto)
+
+console.log(randomString(15));
+-> "vnZJlKpPHD5kdJE"
+
+console.log(randomPassword(12));
+-> "1ZJl5KpPHD5k"
+
 ```
 
 You can also use the default export:
@@ -63,7 +70,7 @@ console.log(randomChoice(teamDefault));
 ### CommonJS
 
 ```js
-const { team, randomInt, randomFloat, randomChoice, randomId } = require("chatujs");
+const { team, randomInt, randomFloat, randomChoice, randomId, randomPassword, randomString } = require("chatujs");
 
 console.log(team);
 -> ["Gaganandra Mondal", "Shubhranil Karmakar", "Debottam Kar"]
@@ -78,7 +85,14 @@ console.log(randomChoice(team));
 -> e.g., "Shubhranil Karmakar"
 
 console.log(randomId());
--> e.g., f594d6ec-7af4-4ef9-ae2c-69cad3cc0361
+-> e.g., "f594d6ec-7af4-4ef9-ae2c-69cad3cc0361"
+
+console.log(randomString(15));
+-> "vnZJlKpPHD5kdJE"
+
+console.log(randomPassword(12));
+-> "1ZJl5KpPHD5k"
+
 ```
 
 Import the default export:

@@ -1,4 +1,5 @@
-// index.cjs
+const { chars, alphabets } = require("./array.cjs");
+
 const team = ["Gaganandra Mondal", "Shubhranil Karmakar", "Debottam Kar"];
 
 function randomInt(lowerLimit, upperLimit) {
@@ -20,6 +21,26 @@ function randomChoice(arr) {
 
 function randomId() {
   return crypto.randomUUID();
+}
+
+function randomPassword(len) {
+  if (len > 0) {
+    let resPassword = "";
+    for (let i = 0; i < len; i++) {
+      resPassword += chars[randomInt(0, 61)];
+    }
+    return resPassword;
+  }
+}
+
+function randomString(len) {
+  if (len > 0) {
+    let resString = "";
+    for (let i = 0; i < len; i++) {
+      resString += alphabets[randomInt(0, 51)];
+    }
+    return resString;
+  }
 }
 
 module.exports = { team, randomInt, randomFloat, randomChoice, randomId, default: team };

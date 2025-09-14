@@ -8,5 +8,9 @@ declare function randomChoice<T>(arr: T[]): T;
 
 declare function randomId(): string;
 
-export { team, randomInt, randomFloat, randomChoice, randomId };
+declare function randomPassword(len: number): string;
+
+declare function randomString(len: number): string;
+
+export { team, randomInt, randomFloat, randomChoice, randomId, randomPassword, randomString };
 export default team;
