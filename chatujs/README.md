@@ -8,8 +8,10 @@ This package exports a simple team list (as an array of names) along with utilit
 - a random floating-point number
 - a random element from an array
 - a random ID
+- a random Password
+- a random String
 
-[![Version](https://img.shields.io/badge/version-1.2.0-blue)]()
+[![Version](https://img.shields.io/badge/version-1.2.1-blue)]()
 
 ## - - - Happy JSing - - -
 
