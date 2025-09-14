@@ -43,4 +43,12 @@ function randomString(len) {
   }
 }
 
-module.exports = { team, randomInt, randomFloat, randomChoice, randomId, default: team };
+function randomShuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = randomInt(0, array.length - 1);
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+module.exports = { team, randomInt, randomFloat, randomChoice, randomId, randomPassword, randomString, randomShuffle, default: team };

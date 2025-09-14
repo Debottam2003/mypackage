@@ -10,8 +10,9 @@ This package exports a simple team list (as an array of names) along with utilit
 - a random ID
 - a random Password
 - a random String
+- a random Shuffle
 
-[![Version](https://img.shields.io/badge/version-1.2.1-blue)]()
+[![Version](https://img.shields.io/badge/version-1.2.2-blue)]()
 
 ## - - - Happy JSing - - -
 
@@ -48,6 +49,10 @@ console.log(randomString(15));
 
 console.log(randomPassword(12));
 -> "1ZJl5KpPHD5k"
+
+console.log(randomShuffle(team));
+-> [ 'Debottam Kar', 'Shubhranil Karmakar', 'Gagan Mondal' ]
+-> [ 'Gagan Mondal', 'Debottam Kar', 'Shubhranil Karmakar' ]
 
 ```
 
@@ -94,6 +99,10 @@ console.log(randomString(15));
 
 console.log(randomPassword(12));
 -> "1ZJl5KpPHD5k"
+
+console.log(randomShuffle(team));
+-> [ 'Debottam Kar', 'Shubhranil Karmakar', 'Gagan Mondal' ]
+-> [ 'Gagan Mondal', 'Debottam Kar', 'Shubhranil Karmakar' ]
 
 ```
 

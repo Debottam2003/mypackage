@@ -3,11 +3,17 @@ import { chars, alphabets } from "./array.mjs";
 export const team = ["Gagan Mondal", "Shubhranil Karmakar", "Debottam Kar"];
 
 export function randomInt(lowerLimit, upperLimit) {
+    if (lowerLimit > upperLimit) {
+        [lowerLimit, upperLimit] = [upperLimit, lowerLimit];
+    }
     let randomNumber = Math.floor(Math.random() * (upperLimit - lowerLimit + 1)) + lowerLimit;
     return randomNumber;
 }
 
 export function randomFloat(lowerLimit, upperLimit) {
+    if (lowerLimit > upperLimit) {
+        [lowerLimit, upperLimit] = [upperLimit, lowerLimit];
+    }
     let randomNumber = Math.random() * (upperLimit - lowerLimit) + lowerLimit;
     return randomNumber;
 }
@@ -41,6 +47,14 @@ export function randomString(len) {
         }
         return resString;
     }
+}
+
+export function randomShuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = randomInt(0, array.length - 1);
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
 }
 
 export default team;
