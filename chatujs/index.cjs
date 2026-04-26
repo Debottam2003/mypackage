@@ -2,6 +2,9 @@ const { chars, alphabets } = require("./array.cjs");
 
 const team = ["Gaganandra Mondal", "Shubhranil Karmakar", "Debottam Kar"];
 
+let shuffled_chars = randomShuffle(chars);
+let shuffled_alphabets = randomShuffle(alphabets);
+
 function randomInt(lowerLimit, upperLimit) {
   let randomNumber = Math.floor(Math.random() * (upperLimit - lowerLimit + 1)) + lowerLimit;
   return randomNumber;
@@ -27,7 +30,7 @@ function randomPassword(len) {
   if (len > 0) {
     let resPassword = "";
     for (let i = 0; i < len; i++) {
-      resPassword += chars[randomInt(0, 61)];
+      resPassword += shuffled_chars[randomInt(0, 61)];
     }
     return resPassword;
   }
@@ -37,18 +40,19 @@ function randomString(len) {
   if (len > 0) {
     let resString = "";
     for (let i = 0; i < len; i++) {
-      resString += alphabets[randomInt(0, 51)];
+      resString += shuffled_alphabets[randomInt(0, 51)];
     }
     return resString;
   }
 }
 
-function randomShuffle(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = randomInt(0, array.length - 1);
-    [array[i], array[j]] = [array[j], array[i]];
+function randomShuffle(arr) {
+  let new_arr = [...arr];
+  for (let i = new_arr.length - 1; i > 0; i--) {
+    const j = randomInt(0, new_arr.length - 1);
+    [new_arr[i], new_arr[j]] = [new_arr[j], new_arr[i]];
   }
-  return array;
+  return new_arr;
 }
 
 module.exports = { team, randomInt, randomFloat, randomChoice, randomId, randomPassword, randomString, randomShuffle, default: team };

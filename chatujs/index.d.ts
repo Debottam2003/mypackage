@@ -14,7 +14,7 @@ declare function randomPassword(len: number): string;
 
 declare function randomString(len: number): string;
 
-declare function randomShuffle(arr: any[]): any;
+declare function randomShuffle(arr: any[]): any[];
 
 export { team, randomInt, randomFloat, randomChoice, randomId, randomPassword, randomString, randomShuffle };
 export default team;
