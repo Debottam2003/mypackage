@@ -1,0 +1,19 @@
+{
+  "name": "passgener",
+  "version": "1.0.2",
+  "bin": {
+    "passgener": "./index.js"
+  },
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Debootam Kar",
+  "type": "module",
+  "license": "ISC",
+  "dependencies": {
+    "chatujs": "^2.0.0"
+  }
+}
