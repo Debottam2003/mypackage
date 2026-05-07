@@ -1,7 +1,7 @@
 ## 🗂️ Packages
 
-| Package | Description |
-|---------|-------------|
+| Package |
+|---------|
 | [`chatujs`](#-chatujs) |
 | [`organizer`](#-organizer) |
 | [`passgener`](#-passgener) |
